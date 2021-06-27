@@ -1,0 +1,178 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  font-size: 14px;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+.container{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.container .desktop{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/wallpaper-def-large.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.container .taskbar{
+  width: 100vw;
+  height: 46px;
+  background-color: rgba(255,255,255,.6);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.taskbar .center-actions{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+.taskbar .center-actions button{
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  margin: 4px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+  transition: .15s;
+}
+.taskbar .center-actions button:hover{
+  background-color: rgba(255,255,255,.4);
+}
+
+.taskbar .center-actions button:focus{
+  background-color: #fff;
+}
+
+.taskbar .right-actions{
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+.right-actions button{
+  width: 25px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.right-actions .time-n-date{
+  width: 80px;
+  text-align: right;
+  line-height: 18px;
+  margin-left: 5px;
+}
+.right-actions button:hover{
+  background-color: rgba(0,0,0,.2);
+}
+
+.start-menu{
+  width: 500px;
+  max-width: 100%;
+  /* height: 340px; */
+  background-color: #fff9;
+  backdrop-filter: blur(35px);
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 0px #0006;
+  border: 1px solid #0003;
+}
+.start-menu .box{
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+.start-menu .search-bar{
+  width: 100%;
+  height: 30px;
+  box-shadow: 0px 0px 5px 0px #0003;
+  margin-bottom: 30px;
+}
+.start-menu .search-bar .icon{
+  float: left;
+  width: 46px;
+  height: 38px;
+  background-color: white;
+  padding: 10px 14px;
+  border-bottom: 2px solid royalblue;
+  border-radius: 3px 0 0 3px;
+}
+.start-menu .search-bar input{
+  float: left;
+  border: none;
+  border-bottom: 2px solid royalblue;
+  outline: none;
+  width: calc(100% - 46px);
+  height: 38px;
+  border-radius: 0 3px 3px 0;
+}
+.start-menu .pinned-apps{
+  padding: .5rem 1rem;
+}
+.start-menu .pinned-apps .label{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.start-menu .pinned-apps .label span{
+  font-weight: 900;
+}
+.start-menu .pinned-apps .label button{
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0px 1px 3px 1px #0004;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.start-menu .pinned-apps .app-list{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: 1rem;
+  width: 100%;
+}
+.start-menu .pinned-apps .app-list .app{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.start-menu .pinned-apps .app-list .app:hover{
+  background-color: #fff4;
+}
+.start-menu .pinned-apps .app-list .app img{
+  width: 80%;
+  padding: 6px;
+}
